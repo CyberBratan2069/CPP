@@ -1,0 +1,144 @@
+2023-12-22T10:29:37+0100 DEBUG: binary_search s=jklmnqpo
+2023-12-22T10:29:38+0100 ERROR: binary_search broken! 1
+2023-12-22T10:29:38+0100 DEBUG: linear_search s=jklmnqpo
+2023-12-22T10:29:38+0100 DEBUG: linear_search s[i]=j
+2023-12-22T10:29:38+0100 DEBUG: linear_search s[i]=k
+2023-12-22T10:29:38+0100 DEBUG: linear_search s[i]=l
+2023-12-22T10:29:38+0100 DEBUG: linear_search s[i]=m
+2023-12-22T10:29:38+0100 DEBUG: linear_search s[i]=n
+2023-12-22T10:29:38+0100 DEBUG: linear_search s[i]=q
+2023-12-22T10:29:38+0100 DEBUG: linear_search found it! i=5
+2023-12-22T10:29:38+0100 DEBUG: binary_search s=jklmnqpo
+2023-12-22T10:29:38+0100 ERROR: binary_search broken! 2
+2023-12-22T14:38:49+0100 DEBUG: linear_search s=abcdefghijklmnopqrstuvwxyz
+2023-12-22T14:38:49+0100 DEBUG: linear_search found it! i=0
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=25 c=a
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=12 c=a
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=6 c=a
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=3 c=a
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=1 c=a
+2023-12-22T14:38:49+0100 DEBUG: binary_search_rec found it! left=0
+2023-12-22T14:38:49+0100 DEBUG: binary_search OK!     s=abcdefghijklmnopqrstuvwxyz c=a
+2023-12-22T14:38:49+0100 DEBUG: linear_search s=abcdefghijklmnopqrstuvwxyz
+2023-12-22T14:38:49+0100 DEBUG: linear_search found it! i=1
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=25 c=b
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=12 c=b
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=6 c=b
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=3 c=b
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=1 c=b
+2023-12-22T14:38:49+0100 DEBUG: binary_search_rec found it! right=1
+2023-12-22T14:38:49+0100 DEBUG: binary_search OK!     s=abcdefghijklmnopqrstuvwxyz c=b
+2023-12-22T14:38:49+0100 DEBUG: linear_search s=abcdefghijklmnopqrstuvwxyz
+2023-12-22T14:38:49+0100 DEBUG: linear_search found it! i=2
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=25 c=c
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=12 c=c
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=6 c=c
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=3 c=c
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=1 right=3 c=c
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=1 right=2 c=c
+2023-12-22T14:38:49+0100 DEBUG: binary_search_rec found it! right=2
+2023-12-22T14:38:49+0100 DEBUG: binary_search OK!     s=abcdefghijklmnopqrstuvwxyz c=c
+2023-12-22T14:38:49+0100 DEBUG: linear_search s=abcdefghijklmnopqrstuvwxyz
+2023-12-22T14:38:49+0100 DEBUG: linear_search found it! i=3
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=25 c=d
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=12 c=d
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=6 c=d
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=3 c=d
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=1 right=3 c=d
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=2 right=3 c=d
+2023-12-22T14:38:49+0100 DEBUG: binary_search_rec found it! right=3
+2023-12-22T14:38:49+0100 DEBUG: binary_search OK!     s=abcdefghijklmnopqrstuvwxyz c=d
+2023-12-22T14:38:49+0100 DEBUG: linear_search s=abcdefghijklmnopqrstuvwxyz
+2023-12-22T14:38:49+0100 DEBUG: linear_search found it! i=10
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=25 c=k
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=12 c=k
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=6 right=12 c=k
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=9 right=12 c=k
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=9 right=10 c=k
+2023-12-22T14:38:49+0100 DEBUG: binary_search_rec found it! right=10
+2023-12-22T14:38:49+0100 DEBUG: binary_search OK!     s=abcdefghijklmnopqrstuvwxyz c=k
+2023-12-22T14:38:49+0100 DEBUG: linear_search s=abcdefghijklmnopqrstuvwxyz
+2023-12-22T14:38:49+0100 DEBUG: linear_search found it! i=11
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=25 c=l
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=12 c=l
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=6 right=12 c=l
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=9 right=12 c=l
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=10 right=12 c=l
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=10 right=11 c=l
+2023-12-22T14:38:49+0100 DEBUG: binary_search_rec found it! right=11
+2023-12-22T14:38:49+0100 DEBUG: binary_search OK!     s=abcdefghijklmnopqrstuvwxyz c=l
+2023-12-22T14:38:49+0100 DEBUG: linear_search s=abcdefghijklmnopqrstuvwxyz
+2023-12-22T14:38:49+0100 DEBUG: linear_search found it! i=12
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=25 c=m
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=12 c=m
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=6 right=12 c=m
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=9 right=12 c=m
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=10 right=12 c=m
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=11 right=12 c=m
+2023-12-22T14:38:49+0100 DEBUG: binary_search_rec found it! right=12
+2023-12-22T14:38:49+0100 DEBUG: binary_search OK!     s=abcdefghijklmnopqrstuvwxyz c=m
+2023-12-22T14:38:49+0100 DEBUG: linear_search s=abcdefghijklmnopqrstuvwxyz
+2023-12-22T14:38:49+0100 DEBUG: linear_search found it! i=13
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=25 c=n
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=12 right=25 c=n
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=12 right=18 c=n
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=12 right=15 c=n
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=12 right=13 c=n
+2023-12-22T14:38:49+0100 DEBUG: binary_search_rec found it! right=13
+2023-12-22T14:38:49+0100 DEBUG: binary_search OK!     s=abcdefghijklmnopqrstuvwxyz c=n
+2023-12-22T14:38:49+0100 DEBUG: linear_search s=abcdefghijklmnopqrstuvwxyz
+2023-12-22T14:38:49+0100 DEBUG: linear_search found it! i=22
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=25 c=w
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=12 right=25 c=w
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=18 right=25 c=w
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=21 right=25 c=w
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=21 right=23 c=w
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=21 right=22 c=w
+2023-12-22T14:38:49+0100 DEBUG: binary_search_rec found it! right=22
+2023-12-22T14:38:49+0100 DEBUG: binary_search OK!     s=abcdefghijklmnopqrstuvwxyz c=w
+2023-12-22T14:38:49+0100 DEBUG: linear_search s=abcdefghijklmnopqrstuvwxyz
+2023-12-22T14:38:49+0100 DEBUG: linear_search found it! i=23
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=25 c=x
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=12 right=25 c=x
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=18 right=25 c=x
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=21 right=25 c=x
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=21 right=23 c=x
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=22 right=23 c=x
+2023-12-22T14:38:49+0100 DEBUG: binary_search_rec found it! right=23
+2023-12-22T14:38:49+0100 DEBUG: binary_search OK!     s=abcdefghijklmnopqrstuvwxyz c=x
+2023-12-22T14:38:49+0100 DEBUG: linear_search s=abcdefghijklmnopqrstuvwxyz
+2023-12-22T14:38:49+0100 DEBUG: linear_search found it! i=24
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=25 c=y
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=12 right=25 c=y
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=18 right=25 c=y
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=21 right=25 c=y
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=23 right=25 c=y
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=23 right=24 c=y
+2023-12-22T14:38:49+0100 DEBUG: binary_search_rec found it! right=24
+2023-12-22T14:38:49+0100 DEBUG: binary_search OK!     s=abcdefghijklmnopqrstuvwxyz c=y
+2023-12-22T14:38:49+0100 DEBUG: linear_search s=abcdefghijklmnopqrstuvwxyz
+2023-12-22T14:38:49+0100 DEBUG: linear_search found it! i=25
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=0 right=25 c=z
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=12 right=25 c=z
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=18 right=25 c=z
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=21 right=25 c=z
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=23 right=25 c=z
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=abcdefghijklmnopqrstuvwxyz left=24 right=25 c=z
+2023-12-22T14:38:49+0100 DEBUG: binary_search_rec found it! right=25
+2023-12-22T14:38:49+0100 DEBUG: binary_search OK!     s=abcdefghijklmnopqrstuvwxyz c=z
+2023-12-22T14:38:49+0100 DEBUG: linear_search s=jklmnqpo
+2023-12-22T14:38:49+0100 DEBUG: linear_search found it! i=6
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=jklmnqpo left=0 right=7 c=p
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=jklmnqpo left=3 right=7 c=p
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=jklmnqpo left=3 right=5 c=p
+2023-12-22T14:38:49+0100 DEBUG: binary_search s=jklmnqpo left=4 right=5 c=p
+2023-12-22T14:38:49+0100 WARNING: binary_search_rec didn't find c=p
+2023-12-22T14:38:49+0100 ERROR: binary_search BROKEN! text=jklmnqpo c=p
+2024-01-15T17:48:54+0100 DEBUG: linear_search s=jklmnqpo
+2024-01-15T17:48:54+0100 DEBUG: linear_search found it! i=6
+2024-01-15T17:48:54+0100 DEBUG: binary_search s=jklmnqpo left=0 right=7 c=p
+2024-01-15T17:48:54+0100 DEBUG: binary_search s=jklmnqpo left=3 right=7 c=p
+2024-01-15T17:48:54+0100 DEBUG: binary_search s=jklmnqpo left=3 right=5 c=p
+2024-01-15T17:48:54+0100 DEBUG: binary_search s=jklmnqpo left=4 right=5 c=p
+2024-01-15T17:48:54+0100 WARNING: binary_search_rec didn't find c=p
+2024-01-15T17:48:54+0100 ERROR: binary_search BROKEN! text=jklmnqpo c=p

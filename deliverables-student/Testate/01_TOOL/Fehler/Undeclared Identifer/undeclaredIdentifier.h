@@ -1,0 +1,10 @@
+//
+// Created by Christian Reiswich on 2/3/25.
+//
+
+#ifndef SRC_CPP_STUDENT_UNDECLAREDIDENTIFIER_H
+#define SRC_CPP_STUDENT_UNDECLAREDIDENTIFIER_H
+
+#endif //SRC_CPP_STUDENT_UNDECLAREDIDENTIFIER_H
+
+int polynom(int x);

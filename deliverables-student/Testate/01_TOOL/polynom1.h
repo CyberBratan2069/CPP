@@ -1,0 +1,7 @@
+#ifndef SRC_CPP_STUDENT_POLYNOM1_H
+#define SRC_CPP_STUDENT_POLYNOM1_H
+
+int polynom1(int x);
+
+
+#endif //SRC_CPP_STUDENT_POLYNOM1_H

@@ -1,0 +1,62 @@
+
+Hier eine Zusammenstellung häufiger Fragen und Antworten zu C/C++
+
+
+Q: Wo kann ich Fragen stellen und Hilfe bekommen?
+A: Benutzen Sie zuerst das Forum im Moodle-Kurs. Andere Teilnehmer oder Dozenten können hier Antworten geben, sofern Sie ausreichend Information zur Verfügung stellen.
+
+
+Q: Darf ich eine IDE (z. B. Visual Studio) verwenden?
+A: Nein. Wir benutzen die Toolchain aus der Shell heraus und verwenden einen einfachen Text-Editor. Eine IDE verwenden wir nicht, da sie Fehler der Art "build failed" nicht behebt und auch nicht zuverlässig verhindert. Das Kapitel Toolchain sollte Sie mit dem Wissen versorgen, Fehler in der am Build verwendeten Toolchain beheben zu können.
+
+
+Q: Darf ich mein Windows Verwenden?
+A: Nein. Einige Programme funktionieren nicht unter cmd.exe. Ggf. können Sie WSL ausprobieren.
+
+
+Q: Darf ich mein eigenes Linux verwenden?
+A: Nein; es sei denn Sie sind Linux-Power-User und können alle Tools selbst installieren und pflegen.
+
+
+Q: Was darf ich zum Testat im Praktikumstermin mitbringen?
+A: Nur das Grundgerüst.
+
+
+Q: Wie soll ich meinen Quellcode verwalten?
+A: Es empfiehlt sich, src-cpp-student zu kopieren. a) zum Üben und noch einmal b) für die Testate. Verwenden Sie das Kommando "cp -r src-cpp-student src-cpp-ueben" und "cp -r src-cpp-student src-cpp-testat". So haben Sie Verzeichnisse für das gesamte Semester.
+ 
+
+Q: Wie läuft ein Testat ab?
+A: Sie bringen das Grundgerüst innerhalb der Linux-VM mit. Im Praktikumstermin führen Sie vor, wie Sie eine odere mehrere Modifikationen umsetzen.
+
+
+Q: Muss ich die Modifikationen hochladen?
+A: Nein. Im Testat zeigen Sie, dass Sie die Modifikationen beherrschen -- das genügt völlig.
+
+
+Q: Muss ich das Feedback bearbeiten und einreichen?
+A: Ja, dies ist Teil des Praktikums. 
+
+
+Q: Das Skript "build.sh" oder "compile.sh" wird nicht ausgeführt; es erscheint eine Fehlermeldung. Was ist das Problem?
+A: Wahrscheinlich ist durch das Entpacken der TGZ-Datei die Information verloren gegangen, dass es sich um ausführbare Skripte handelt. Sie können das durch "chmod u+x build.sh" reparieren. Danach ist die Datei per "./build.sh" ausführbar.
+
+
+Q: Beim Übersetzen wird die Datein "println.hpp" nicht gefunden. Was ist das Problem?
+A: Die Pfadangaben beim Übersetzuingsvorgang (clang++ -I../some/path/to/headers main.cpp) und die tatsächliche Verzeichnisstruktur stimmen nicht überein. Es empfiehlt sich in einem der Unterverzeichnisse einer Kopie von src-cpp-student zu arbeiten.
+
+
+Q: Kann ich mit einem Tablet arbeiten?
+A: Nein. Tablets sind Rechner für den Konsum. Da wir in C++ programmieren, benötigen wir einen Rechner für Produzenten.
+
+
+Q: Was bedeuten die Bewertungen im Moodle-Kurs unter "Feedback" und "Testat"
+A: Hier handelt es sich um interne Notizen und zufällige Werte, die nur für Dozenten relevant sind, falls sie überhaupt eine Bedeutung haben. Ein Feedback oder Testat gilt als erledigt, sobald dort ein Wert über 50 steht. 
+
+Q: 
+A:
+
+
+
+
+
