@@ -33,5 +33,14 @@ size_t match_DIGITS(std::string src, size_t offset, size_t max_offset);
 
 void test_elements();
 
+std::string readFile(std::string inputFile);
+std::string preprocess(std::string input);
+std::size_t match_OPEN(std::string src, std::size_t offset, std::size_t max_offset);
+std::size_t match_CLOSE(std::string src, std::size_t offset, std::size_t max_offset);
+std::size_t match_OP(std::string src, std::size_t offset, std::size_t max_offset);
+std::size_t match_S_EXPR(std::string src, std::size_t offset, std::size_t max_offset);
+
+
+
 
 #endif
