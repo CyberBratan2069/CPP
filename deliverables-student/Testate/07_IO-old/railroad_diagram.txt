@@ -2,6 +2,12 @@
 
 https://www.bottlecaps.de/rr/ui
 
+S_EXPR   ::= '(' OP OPERANDS ')'
+OP       ::= '+' | '-'
+OPERANDS ::= DIGITS {DIGITS}
+DIGITS   ::= [0-9]+
+
+
 
 
 EXCL        ::= '!'

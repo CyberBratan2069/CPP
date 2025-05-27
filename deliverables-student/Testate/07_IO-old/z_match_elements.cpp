@@ -35,11 +35,13 @@ size_t match_world(std::string src, size_t offset, size_t max_offset){
   return h_offset == s_world.length() ? h_offset : 0;  
 }
 
+/*
 /// COMMA       ::= ',' 
 size_t match_COMMA(std::string src, size_t offset, size_t max_offset){
   if ( offset >= src.length() || max_offset >= src.length()) return 0;
   return src[offset] == ',' ? 1 : 0;
 }
+*/
 
 /// EXCL        ::= '!'
 size_t match_EXCL(std::string src, size_t offset, size_t max_offset){
@@ -48,7 +50,7 @@ size_t match_EXCL(std::string src, size_t offset, size_t max_offset){
 }
 
 
-
+/*
 /// DIGIT       ::= '0' | '1' | '2' | ... | '9'
 size_t match_DIGIT(std::string src, size_t offset, size_t max_offset){
   if ( offset >= src.length() || max_offset >= src.length()) return 0;
@@ -59,6 +61,8 @@ size_t match_DIGIT(std::string src, size_t offset, size_t max_offset){
      return 0;
   }
 }
+*/
+
 
 /// LETTER      ::= 'a' | 'b' | 'c' | ... | 'z' | 'A' | 'B' | 'C' | ... | 'Z'
 size_t match_ALPHA(std::string src, size_t offset, size_t max_offset){
@@ -71,6 +75,7 @@ size_t match_ALPHA(std::string src, size_t offset, size_t max_offset){
   }
 }
 
+/*
 /// DIGITS      ::= DIGIT (DIGIT)*
 size_t match_DIGITS(std::string src, size_t offset, size_t max_offset){
   ///println("match_DIGITS offset=",offset, " max_offset=", max_offset);
@@ -85,13 +90,14 @@ size_t match_DIGITS(std::string src, size_t offset, size_t max_offset){
   assert( offset+match_len <= max_offset+1 );
   return match_len;
 }
-
+*/
 
 
 void test_elements(){
   if (loglevel>1) println("test_literals()   begin");
 
   std::string d1 = "1";  
+
 
   assert( match_DIGITS(d1, 0, d1.length()-1) == d1.length());
   assert( match_DIGITS(d1, 0, d1.length()+0) == 0);
@@ -112,7 +118,8 @@ void test_elements(){
   assert( match_DIGITS("x", 0, 2) == 0);
   assert( match_DIGITS("xx", 0, 2) == 0);
 
-  
+
+
   std::string h1 = "Hello";  
   assert( match_hello(h1, 0, h1.length()-1) == h1.length());
   assert( match_hello(h1, 0, h1.length()+0) == 0);

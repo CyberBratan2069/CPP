@@ -14,5 +14,5 @@ add_executable(Cpp main.cpp
         deliverables-student/Testate/04a_UDEF/RgbColor/RgbColor.cpp
         deliverables-student/Testate/04a_UDEF/RgbColor/main_rgbColor.cpp
         deliverables-student/src-cpp-student/01_TOOL/z_implDecl/main.c
-        deliverables-student/Testate/07_IO/z_match_main.cpp
+        deliverables-student/Testate/07_IO-old/z_match_main.cpp
 )
