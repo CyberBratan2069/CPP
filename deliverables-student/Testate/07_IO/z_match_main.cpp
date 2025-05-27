@@ -5,6 +5,7 @@
 #include <cctype>
 #include <fstream>
 #include <sstream>
+#include <cassert>
 
 
 int loglevel = 0;  /// needed by log.hpp
@@ -30,30 +31,87 @@ std::string readFile(std::string inputFile) {
 
 
 std::string preprocess(std::string input) {
-    for (std::string::iterator it = input.begin(); it < input.end(); it++) {
-        if (std::isspace(static_cast<unsigned char>(*it))) {
+    for(std::string::iterator it = input.begin(); it < input.end(); it++) {
+        if(std::isspace(static_cast<unsigned char>(*it))) {
             input.erase(it); // löschen an der pos:
         }
     }
     return input;
 }
 
-void match_ALL_GRAMMATIK(std::string input) {
-    std::string preprocessInput = preprocess(input);
-    println("Input: " + preprocessInput);
-    //println(match_OPEN  (preprocessInput, 0, preprocessInput.length() -1));
-    //println(match_OP    (preprocessInput, 0, preprocessInput.length() -1));
-    //println(match_DIGIT (preprocessInput, 2, preprocessInput.length() -1));
-    //println(match_DIGITS(preprocessInput, 2, preprocessInput.length() -1));
+
+std::size_t match_OPEN(std::string src, std::size_t offset, std::size_t max_offset) {
+    if(offset > max_offset) return 0;
+    return src[offset] == '(' ? 1 : 0;
 }
+
+
+std::size_t match_CLOSE(std::string src, std::size_t offset, std::size_t max_offset) {
+    if(offset > max_offset) return 0;
+    return src[offset] == ')' ? 1 : 0;
+}
+
+
+std::size_t match_OP(std::string src, std::size_t offset, std::size_t max_offset) {
+    if(offset > max_offset) return 0;
+    if(src[offset] == '+' || src[offset] == '-') return 1;
+    return 0;
+}
+
+
+std::size_t match_S_EXPR(std::string src, std::size_t offset, std::size_t max_offset) {
+    if(offset > max_offset) return 0;
+
+    std::size_t currentPos = offset;
+    //std::size_t digitCount = 0;
+
+    std::size_t open = match_OPEN(src, currentPos, max_offset);
+    if(open == 0) return 0;
+    else currentPos++;
+
+    std::size_t op = match_OP(src, currentPos, max_offset);
+    if(op == 0) return 0;
+    else currentPos++;
+
+    std::size_t digits = match_DIGITS(src, currentPos, max_offset);
+    if(digits <= 2) return 0;
+    else currentPos += digits;
+
+
+    std::size_t close = match_CLOSE(src, currentPos, max_offset);
+    if(close == 0) return 0;
+    else currentPos++;
+
+    return currentPos - offset;
+}
+
 
 int main() {
 
     test_1();
 
+    /** TextFile Test *************************************************************************************************/
+    println("TextFile Test \n");
 
-    std::string g2 = "(+ 1 2 3 456)";
-    match_ALL_GRAMMATIK(g2);
+    std::string inputTextFile = readFile("InputFile.txt");
+    println("Input: \n" + inputTextFile);
+
+    std::string outputTextFile = preprocess(inputTextFile);
+    println("Output: \n" + outputTextFile + "\n");
+    /******************************************************************************************************************/
+
+    /** Grammatik Test ************************************************************************************************/
+    println("Grammatik Test");
+
+    std::string inputGrammatik = readFile("Grammatik.txt");
+    println("Input: \n" + inputGrammatik);
+
+    std::string inputPreprocessed = preprocess(inputGrammatik);
+    println("Input preprocessed: \n" + inputPreprocessed);
+
+    std::size_t outputGrammatik = match_S_EXPR(inputPreprocessed, 0, inputPreprocessed.length()-1);
+    println("Output: \n", outputGrammatik);
+    /******************************************************************************************************************/
   
     std::string h1 = "Hello";
    /** 
