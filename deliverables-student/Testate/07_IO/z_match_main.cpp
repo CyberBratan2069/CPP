@@ -83,8 +83,7 @@ std::size_t match_S_EXPR(std::string src, std::size_t offset, std::size_t max_of
     return currentPos - offset;
 }
 
-/** Modi 1 */
-
+/** C Grammatik Modi 1 ************************************************************************************************/
 std::size_t match_TYPE(std::string src, std::size_t offset, std::size_t max_offset) {
     if (offset >= src.length() || max_offset >= src.length()) return 0;
     std::vector<std::string> types = {"int", "double", "void", "float", "char"};
@@ -95,7 +94,6 @@ std::size_t match_TYPE(std::string src, std::size_t offset, std::size_t max_offs
     }
     return 0;
 }
-
 
 std::size_t match_SEMMI(std::string src, std::size_t offset, std::size_t max_offset) {
     if (offset >= src.length() || max_offset >= src.length()) return 0;
@@ -131,7 +129,6 @@ std::size_t match_ARGS(std::string src, std::size_t offset, std::size_t max_offs
     return currentPos - offset;
 }
 
-
 std::size_t match_C_EXPR(std::string src, std::size_t offset, std::size_t max_offset) {
     if(offset > max_offset) return 0;
 
@@ -163,7 +160,36 @@ std::size_t match_C_EXPR(std::string src, std::size_t offset, std::size_t max_of
 
     return currentPos - offset;
 }
+/**********************************************************************************************************************/
 
+/** modi 3 ************************************************************************************************************/
+std::size_t match_S_EXPR_2(std::string src, std::size_t offset, std::size_t max_offset) {
+    if(offset > max_offset) return 0;
+
+    std::size_t currentPos = offset;
+
+    std::size_t open = match_OPEN(src, currentPos, max_offset);
+    if(open == 0) return 0;
+    else currentPos++;
+
+    std::size_t op = match_OP(src, currentPos, max_offset);
+    if(op == 0) return 0;
+    else currentPos++;
+
+    std::size_t digits = match_DIGITS(src, currentPos, max_offset);
+    if(digits == 0) return 0;
+    else currentPos += digits;
+
+    std::size_t close = match_CLOSE(src, currentPos, max_offset);
+    if(close == 0) {
+
+        std::size_t match_s_expr = match_S_EXPR(src, currentPos, max_offset);
+        currentPos += match_s_expr;
+    }
+
+    return currentPos - offset;
+}
+/**********************************************************************************************************************/
 
 
 int main() {
@@ -184,28 +210,41 @@ int main() {
     println("Grammatik Test");
 
     std::string inputGrammatik = readFile("Grammatik.txt");
-    println("Input: \n" + inputGrammatik);
+    println("Input: " + inputGrammatik);
 
     std::string inputPreprocessed = preprocess(inputGrammatik);
-    println("Input preprocessed: \n" + inputPreprocessed);
+    println("Input preprocessed: " + inputPreprocessed);
 
     std::size_t outputGrammatik = match_S_EXPR(inputPreprocessed, 0, inputPreprocessed.length()-1);
-    println("Output: ", outputGrammatik);
+    println("Output: ", outputGrammatik, "\n");
     /******************************************************************************************************************/
 
-    /** C Grammatik Test **********************************************************************************************/
+    /** C Grammatik Test Modi *****************************************************************************************/
     println("C Grammatik Test");
 
     std::string inputCGrammatik = readFile("C-Grammatik");
-    println("Input: \n" + inputCGrammatik);
+    println("Input: " + inputCGrammatik);
 
     std::string inputCPreprocessed = preprocess(inputCGrammatik);
     println("Input C preprocessed: " + inputCPreprocessed);
 
     std::size_t outputCGrammatik = match_C_EXPR(inputCPreprocessed, 0, inputCPreprocessed.length()-1);
-    println("Output: ", outputCGrammatik);
+    println("Output: ", outputCGrammatik, "\n");
     /******************************************************************************************************************/
 
+    /** Modi 3 Test ***************************************************************************************************/
+    println("Modi 3");
+
+    std::string inputModi3 = readFile("Modi3.txt");
+    println("Input: " + inputModi3);
+
+    std::string inputModi3Preprocessed = preprocess(inputModi3);
+    println("Input Modi3 preprocessed: " + inputModi3Preprocessed);
+
+    std::size_t outputModi3 = match_S_EXPR_2(inputModi3Preprocessed, 0, inputModi3Preprocessed.length()-1);
+    println("Output: ", outputModi3, "\n");
+
+    /******************************************************************************************************************/
 
     std::string h1 = "Hello";
    /** 
