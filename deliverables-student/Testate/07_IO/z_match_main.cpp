@@ -182,10 +182,14 @@ std::size_t match_S_EXPR_2(std::string src, std::size_t offset, std::size_t max_
 
     std::size_t close = match_CLOSE(src, currentPos, max_offset);
     if(close == 0) {
-
         std::size_t match_s_expr = match_S_EXPR(src, currentPos, max_offset);
+        if(match_s_expr == 0) return 0;
         currentPos += match_s_expr;
     }
+
+    std::size_t close2 = match_CLOSE(src, currentPos, max_offset);
+    if(close2 == 0) return 0;
+    else currentPos++;
 
     return currentPos - offset;
 }
@@ -222,7 +226,7 @@ int main() {
     /** C Grammatik Test Modi *****************************************************************************************/
     println("C Grammatik Test");
 
-    std::string inputCGrammatik = readFile("C-Grammatik");
+    std::string inputCGrammatik = readFile("C-Grammatik.txt");
     println("Input: " + inputCGrammatik);
 
     std::string inputCPreprocessed = preprocess(inputCGrammatik);
