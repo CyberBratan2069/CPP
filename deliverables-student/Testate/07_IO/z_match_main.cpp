@@ -5,7 +5,6 @@
 #include <cctype>
 #include <fstream>
 #include <sstream>
-#include <cassert>
 
 
 int loglevel = 0;  /// needed by log.hpp
@@ -15,6 +14,7 @@ void test_1(){
   test_elements();
   test_patterns();
 }
+
 
 std::string readFile(std::string inputFile) {
     std::string all_lines;
@@ -31,7 +31,7 @@ std::string readFile(std::string inputFile) {
 
 
 std::string preprocess(std::string input) {
-    for(std::string::iterator it = input.begin(); it < input.end(); it++) {
+    for(std::string::iterator it = input.begin(); it< input.end(); it++) {
         if(std::isspace(static_cast<unsigned char>(*it))) {
             input.erase(it); // löschen an der pos:
         }
@@ -63,7 +63,6 @@ std::size_t match_S_EXPR(std::string src, std::size_t offset, std::size_t max_of
     if(offset > max_offset) return 0;
 
     std::size_t currentPos = offset;
-    //std::size_t digitCount = 0;
 
     std::size_t open = match_OPEN(src, currentPos, max_offset);
     if(open == 0) return 0;
@@ -77,13 +76,95 @@ std::size_t match_S_EXPR(std::string src, std::size_t offset, std::size_t max_of
     if(digits <= 2) return 0;
     else currentPos += digits;
 
-
     std::size_t close = match_CLOSE(src, currentPos, max_offset);
     if(close == 0) return 0;
     else currentPos++;
 
     return currentPos - offset;
 }
+
+/** Modi 1 */
+
+std::size_t match_TYPE(std::string src, std::size_t offset, std::size_t max_offset) {
+    if (offset >= src.length() || max_offset >= src.length()) return 0;
+    std::vector<std::string> types = {"int", "double", "void", "float", "char"};
+    for(std::string type : types) {
+        if(src.compare(offset, type.length(), type) == 0) {
+            return type.length();
+        }
+    }
+    return 0;
+}
+
+
+std::size_t match_SEMMI(std::string src, std::size_t offset, std::size_t max_offset) {
+    if (offset >= src.length() || max_offset >= src.length()) return 0;
+    return src[offset] == ';' ? 1 : 0;
+}
+
+std::size_t match_ARGS(std::string src, std::size_t offset, std::size_t max_offset) {
+    if(offset > max_offset) return 0;
+
+    std::size_t currentPos = offset;
+
+    std::size_t args = match_TYPE(src, currentPos, max_offset);
+    if(args == 0) return 0;
+    else currentPos += args;
+
+    std::size_t variableName = match_ALPHA(src, currentPos, max_offset);
+    if(variableName == 0) return 0;
+    else currentPos++;
+
+    std::size_t comma = match_COMMA(src, currentPos, max_offset);
+    if(comma == 1) {
+        currentPos++;
+
+        std::size_t args2 = match_TYPE(src, currentPos, max_offset);
+        if(args2 == 0) return 0;
+        else currentPos += args2;
+
+        std::size_t variableName2 = match_ALPHA(src, currentPos, max_offset);
+        if(variableName2 == 0) return 0;
+        else currentPos++;
+    }
+
+    return currentPos - offset;
+}
+
+
+std::size_t match_C_EXPR(std::string src, std::size_t offset, std::size_t max_offset) {
+    if(offset > max_offset) return 0;
+
+    std::size_t currentPos = offset;
+
+    std::size_t type = match_TYPE(src, currentPos, max_offset);
+    if(type == 0) return 0;
+    else currentPos += type;
+
+    std::size_t words = match_WORDS(src, currentPos, max_offset);
+    if(words == 0) return 0;
+    else currentPos += words;
+
+    std::size_t open = match_OPEN(src, currentPos, max_offset);
+    if(open == 0) return 0;
+    else currentPos++;
+
+    std::size_t args = match_ARGS(src, currentPos, max_offset);
+    if(args == 0) return 0;
+    else currentPos += args;
+
+    std::size_t close = match_CLOSE(src, currentPos, max_offset);
+    if(close == 0) return 0;
+    else currentPos++;
+
+    std::size_t semmi = match_SEMMI(src, currentPos, max_offset);
+    if (semmi == 0) return 0;
+    else currentPos++;
+
+
+    return currentPos - offset;
+}
+
 
 
 int main() {
@@ -110,9 +191,26 @@ int main() {
     println("Input preprocessed: \n" + inputPreprocessed);
 
     std::size_t outputGrammatik = match_S_EXPR(inputPreprocessed, 0, inputPreprocessed.length()-1);
-    println("Output: \n", outputGrammatik);
+    println("Output: ", outputGrammatik);
     /******************************************************************************************************************/
-  
+
+    /** C Grammatik Test **********************************************************************************************/
+    println("C Grammatik Test");
+
+    std::string inputCGrammatik = readFile("C-Grammatik");
+    println("Input: \n" + inputCGrammatik);
+
+    std::string inputCPreprocessed = preprocess(inputCGrammatik);
+    println("Input C preprocessed: " + inputCPreprocessed);
+
+    std::size_t outputCGrammatik = match_C_EXPR(inputCPreprocessed, 0, inputCPreprocessed.length()-1);
+    println("Output: ", outputCGrammatik);
+
+
+
+    /******************************************************************************************************************/
+
+
     std::string h1 = "Hello";
    /** 
     println("h1 a", match_hello(h1, 0, h1.length()));

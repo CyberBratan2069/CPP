@@ -61,6 +61,21 @@ size_t match_DIGIT(std::string src, size_t offset, size_t max_offset){
   }
 }
 
+/// DIGITS      ::= DIGIT (DIGIT)*
+size_t match_DIGITS(std::string src, size_t offset, size_t max_offset){
+    ///println("match_DIGITS offset=",offset, " max_offset=", max_offset);
+    if ( offset >= src.length() || max_offset >= src.length()) return 0;
+    int match_len = 0;
+    int is_digit = 0;
+    do {
+        is_digit = match_DIGIT(src, offset + match_len, max_offset);
+        match_len += is_digit;
+    } while (is_digit > 0 && (offset+match_len<=max_offset));
+///  println("match_DIGITS", "src=", src, " match_len=",match_len," offset=",offset, " max_offset=", max_offset, " src[offset]=", src[offset], " src[max_offset]=", src[max_offset]);
+    assert( offset+match_len <= max_offset+1 );
+    return match_len;
+}
+
 /// LETTER      ::= 'a' | 'b' | 'c' | ... | 'z' | 'A' | 'B' | 'C' | ... | 'Z'
 size_t match_ALPHA(std::string src, size_t offset, size_t max_offset){
   if ( offset >= src.length() || max_offset >= src.length()) return 0;
@@ -72,21 +87,18 @@ size_t match_ALPHA(std::string src, size_t offset, size_t max_offset){
   }
 }
 
-/// DIGITS      ::= DIGIT (DIGIT)*
-size_t match_DIGITS(std::string src, size_t offset, size_t max_offset){
-  ///println("match_DIGITS offset=",offset, " max_offset=", max_offset);
-  if ( offset >= src.length() || max_offset >= src.length()) return 0;
-  int match_len = 0;
-  int is_digit = 0;
-  do {
-    is_digit = match_DIGIT(src, offset + match_len, max_offset);
-    match_len += is_digit;
-  } while (is_digit > 0 && (offset+match_len<=max_offset));
-///  println("match_DIGITS", "src=", src, " match_len=",match_len," offset=",offset, " max_offset=", max_offset, " src[offset]=", src[offset], " src[max_offset]=", src[max_offset]);
-  assert( offset+match_len <= max_offset+1 );
-  return match_len;
+/// WORDS      ::= "abdcefg" ..... "ABCDE
+size_t match_WORDS(std::string src, size_t offset, size_t max_offset) {
+    if ( offset >= src.length() || max_offset >= src.length()) return 0;
+    int match_len = 0;
+    int is_alpha = 0;
+    do {
+        is_alpha = match_ALPHA(src, offset + match_len, max_offset);
+        match_len += is_alpha;
+    } while(is_alpha > 0 && (offset+match_len<=max_offset));
+    assert( offset+match_len <= max_offset+1);
+    return match_len;
 }
-
 
 
 void test_elements(){

@@ -39,7 +39,10 @@ std::size_t match_OPEN(std::string src, std::size_t offset, std::size_t max_offs
 std::size_t match_CLOSE(std::string src, std::size_t offset, std::size_t max_offset);
 std::size_t match_OP(std::string src, std::size_t offset, std::size_t max_offset);
 std::size_t match_S_EXPR(std::string src, std::size_t offset, std::size_t max_offset);
-
+std::size_t match_WORDS(std::string src, std::size_t offset, std::size_t max_offset);
+std::size_t match_SEMMI(std::string src, std::size_t offset, std::size_t max_offset);
+std::size_t match_C_EXPR(std::string src, std::size_t offset, std::size_t max_offset);
+std::size_t match_ARGS(std::string src, std::size_t offset, std::size_t max_offset);
 
 
 

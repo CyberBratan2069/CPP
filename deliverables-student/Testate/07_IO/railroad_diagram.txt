@@ -22,3 +22,5 @@ name_list   ::= ident (comma ident)*
 ident       ::= LETTER (LETTER | DIGIT)*
 
 BITS ::= ('0b')? '0' ('0' | '1')*
+
+TYPE ::= "int" | "double" | "void" | .....
