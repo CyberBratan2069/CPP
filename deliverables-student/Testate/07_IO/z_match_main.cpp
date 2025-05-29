@@ -161,7 +161,6 @@ std::size_t match_C_EXPR(std::string src, std::size_t offset, std::size_t max_of
     if (semmi == 0) return 0;
     else currentPos++;
 
-
     return currentPos - offset;
 }
 
@@ -205,9 +204,6 @@ int main() {
 
     std::size_t outputCGrammatik = match_C_EXPR(inputCPreprocessed, 0, inputCPreprocessed.length()-1);
     println("Output: ", outputCGrammatik);
-
-
-
     /******************************************************************************************************************/
 
 
