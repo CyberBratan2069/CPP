@@ -40,25 +40,6 @@ std::string preprocess(std::string input) {
 }
 
 
-std::size_t match_OPEN(std::string src, std::size_t offset, std::size_t max_offset) {
-    if(offset > max_offset) return 0;
-    return src[offset] == '(' ? 1 : 0;
-}
-
-
-std::size_t match_CLOSE(std::string src, std::size_t offset, std::size_t max_offset) {
-    if(offset > max_offset) return 0;
-    return src[offset] == ')' ? 1 : 0;
-}
-
-
-std::size_t match_OP(std::string src, std::size_t offset, std::size_t max_offset) {
-    if(offset > max_offset) return 0;
-    if(src[offset] == '+' || src[offset] == '-') return 1;
-    return 0;
-}
-
-
 std::size_t match_S_EXPR(std::string src, std::size_t offset, std::size_t max_offset) {
     if(offset > max_offset) return 0;
 
@@ -83,22 +64,6 @@ std::size_t match_S_EXPR(std::string src, std::size_t offset, std::size_t max_of
     return currentPos - offset;
 }
 
-/** C Grammatik Modi 1 ************************************************************************************************/
-std::size_t match_TYPE(std::string src, std::size_t offset, std::size_t max_offset) {
-    if (offset >= src.length() || max_offset >= src.length()) return 0;
-    std::vector<std::string> types = {"int", "double", "void", "float", "char"};
-    for(std::string type : types) {
-        if(src.compare(offset, type.length(), type) == 0) {
-            return type.length();
-        }
-    }
-    return 0;
-}
-
-std::size_t match_SEMMI(std::string src, std::size_t offset, std::size_t max_offset) {
-    if (offset >= src.length() || max_offset >= src.length()) return 0;
-    return src[offset] == ';' ? 1 : 0;
-}
 
 std::size_t match_ARGS(std::string src, std::size_t offset, std::size_t max_offset) {
     if(offset > max_offset) return 0;
@@ -160,9 +125,8 @@ std::size_t match_C_EXPR(std::string src, std::size_t offset, std::size_t max_of
 
     return currentPos - offset;
 }
-/**********************************************************************************************************************/
 
-/** modi 3 ************************************************************************************************************/
+
 std::size_t match_S_EXPR_2(std::string src, std::size_t offset, std::size_t max_offset) {
     if(offset > max_offset) return 0;
 
@@ -193,7 +157,39 @@ std::size_t match_S_EXPR_2(std::string src, std::size_t offset, std::size_t max_
 
     return currentPos - offset;
 }
-/**********************************************************************************************************************/
+
+std::size_t match_Rekursiv(std::string src, std::size_t offset, std::size_t max_offset) {
+    if(offset > max_offset) return 0;
+
+    std::size_t currentPos = offset;
+
+    std::size_t open = match_OPEN(src, currentPos, max_offset);
+    if(open == 0) return 0;
+    else currentPos++;
+
+    std::size_t op = match_OP(src, currentPos, max_offset);
+    if(op == 0) return 0;
+    else currentPos++;
+
+    std::size_t digits = match_DIGITS(src, currentPos, max_offset);
+    if(digits == 0) return 0;
+    else currentPos += digits;
+
+    std::size_t open2 = match_OPEN(src, currentPos, max_offset);
+    if(open2 == 1) {
+        std::size_t rekursiv = match_Rekursiv(src, currentPos, max_offset);
+        if(rekursiv == 0) return 0;
+        else currentPos += rekursiv;
+    }
+
+    std::size_t close2 = match_CLOSE(src, currentPos, max_offset);
+    if(close2 == 0) return 0;
+    else currentPos++;
+
+    return currentPos - offset;
+}
+
+
 
 
 int main() {
@@ -247,6 +243,20 @@ int main() {
 
     std::size_t outputModi3 = match_S_EXPR_2(inputModi3Preprocessed, 0, inputModi3Preprocessed.length()-1);
     println("Output: ", outputModi3, "\n");
+
+    /******************************************************************************************************************/
+
+    /** Testat: Rekursiv Grammatik ************************************************************************************/
+    println("Testat Rekursiv");
+
+    std::string inputTestat = readFile("RekursivGrammatik.txt");
+    println("Input: " + inputTestat);
+
+    std::string inputTestatPreprocessed = preprocess(inputTestat);
+    println("Input Testat Preprocessed: " + inputTestatPreprocessed);
+
+    std::size_t outputTestat = match_Rekursiv(inputTestatPreprocessed, 0, inputTestatPreprocessed.length()-1);
+    println("Output: ", outputTestat, "\n");
 
     /******************************************************************************************************************/
 

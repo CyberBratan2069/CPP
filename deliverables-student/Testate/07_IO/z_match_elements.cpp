@@ -87,8 +87,48 @@ size_t match_ALPHA(std::string src, size_t offset, size_t max_offset){
   }
 }
 
+/**********************************************************************************************************************/
+/** additional grammars */
+/**********************************************************************************************************************/
+std::size_t match_OPEN(std::string src, std::size_t offset, std::size_t max_offset) {
+    if(offset > max_offset) return 0;
+    return src[offset] == '(' ? 1 : 0;
+}
+
+
+std::size_t match_CLOSE(std::string src, std::size_t offset, std::size_t max_offset) {
+    if(offset > max_offset) return 0;
+    return src[offset] == ')' ? 1 : 0;
+}
+
+
+std::size_t match_OP(std::string src, std::size_t offset, std::size_t max_offset) {
+    if(offset > max_offset) return 0;
+    if(src[offset] == '+' || src[offset] == '-') return 1;
+    return 0;
+}
+
+
+std::size_t match_TYPE(std::string src, std::size_t offset, std::size_t max_offset) {
+    if (offset >= src.length() || max_offset >= src.length()) return 0;
+    std::vector<std::string> types = {"int", "double", "void", "float", "char"};
+    for(std::string type : types) {
+        if(src.compare(offset, type.length(), type) == 0) {
+            return type.length();
+        }
+    }
+    return 0;
+}
+
+std::size_t match_SEMMI(std::string src, std::size_t offset, std::size_t max_offset) {
+    if (offset >= src.length() || max_offset >= src.length()) return 0;
+    return src[offset] == ';' ? 1 : 0;
+}
+
+
+
 /// WORDS      ::= "abdcefg" ..... "ABCDE
-size_t match_WORDS(std::string src, size_t offset, size_t max_offset) {
+std::size_t match_WORDS(std::string src, std::size_t offset, std::size_t max_offset) {
     if ( offset >= src.length() || max_offset >= src.length()) return 0;
     int match_len = 0;
     int is_alpha = 0;
@@ -100,6 +140,9 @@ size_t match_WORDS(std::string src, size_t offset, size_t max_offset) {
     return match_len;
 }
 
+
+
+/**********************************************************************************************************************/
 
 void test_elements(){
   if (loglevel>1) println("test_literals()   begin");
