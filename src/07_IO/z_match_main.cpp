@@ -16,7 +16,8 @@ void test_1(){
 }
 
 
-std::string readFile(std::string inputFile) {
+std::string readFile(std::string inputFile)
+{
     std::string all_lines;
 
     std::ifstream readFile(inputFile);
@@ -30,9 +31,12 @@ std::string readFile(std::string inputFile) {
 }
 
 
-std::string preprocess(std::string input) {
-    for(std::string::iterator it = input.begin(); it< input.end(); it++) {
-        if(std::isspace(static_cast<unsigned char>(*it))) {
+std::string preprocess(std::string input)
+{
+    for(std::string::iterator it = input.begin(); it< input.end(); it++)
+    {
+        if(std::isspace(static_cast<unsigned char>(*it)))
+        {
             input.erase(it); // löschen an der pos:
         }
     }
@@ -40,7 +44,8 @@ std::string preprocess(std::string input) {
 }
 
 
-std::size_t match_S_EXPR(std::string src, std::size_t offset, std::size_t max_offset) {
+std::size_t match_S_EXPR(std::string src, std::size_t offset, std::size_t max_offset)
+{
     if(offset > max_offset) return 0;
 
     std::size_t currentPos = offset;
@@ -65,7 +70,8 @@ std::size_t match_S_EXPR(std::string src, std::size_t offset, std::size_t max_of
 }
 
 
-std::size_t match_ARGS(std::string src, std::size_t offset, std::size_t max_offset) {
+std::size_t match_ARGS(std::string src, std::size_t offset, std::size_t max_offset)
+{
     if(offset > max_offset) return 0;
 
     std::size_t currentPos = offset;
@@ -79,7 +85,8 @@ std::size_t match_ARGS(std::string src, std::size_t offset, std::size_t max_offs
     else currentPos++;
 
     std::size_t comma = match_COMMA(src, currentPos, max_offset);
-    if(comma == 1) {
+    if(comma == 1)
+    {
         currentPos++;
 
         std::size_t args2 = match_TYPE(src, currentPos, max_offset);
@@ -94,7 +101,8 @@ std::size_t match_ARGS(std::string src, std::size_t offset, std::size_t max_offs
     return currentPos - offset;
 }
 
-std::size_t match_C_EXPR(std::string src, std::size_t offset, std::size_t max_offset) {
+std::size_t match_C_EXPR(std::string src, std::size_t offset, std::size_t max_offset)
+{
     if(offset > max_offset) return 0;
 
     std::size_t currentPos = offset;
@@ -127,7 +135,8 @@ std::size_t match_C_EXPR(std::string src, std::size_t offset, std::size_t max_of
 }
 
 
-std::size_t match_S_EXPR_2(std::string src, std::size_t offset, std::size_t max_offset) {
+std::size_t match_S_EXPR_2(std::string src, std::size_t offset, std::size_t max_offset)
+{
     if(offset > max_offset) return 0;
 
     std::size_t currentPos = offset;
@@ -145,7 +154,8 @@ std::size_t match_S_EXPR_2(std::string src, std::size_t offset, std::size_t max_
     else currentPos += digits;
 
     std::size_t close = match_CLOSE(src, currentPos, max_offset);
-    if(close == 0) {
+    if(close == 0)
+    {
         std::size_t match_s_expr = match_S_EXPR(src, currentPos, max_offset);
         if(match_s_expr == 0) return 0;
         currentPos += match_s_expr;
@@ -158,7 +168,8 @@ std::size_t match_S_EXPR_2(std::string src, std::size_t offset, std::size_t max_
     return currentPos - offset;
 }
 
-std::size_t match_Rekursiv(std::string src, std::size_t offset, std::size_t max_offset) {
+std::size_t match_Rekursiv(std::string src, std::size_t offset, std::size_t max_offset)
+{
     if(offset > max_offset) return 0;
 
     std::size_t currentPos = offset;
@@ -176,7 +187,8 @@ std::size_t match_Rekursiv(std::string src, std::size_t offset, std::size_t max_
     else currentPos += digits;
 
     std::size_t open2 = match_OPEN(src, currentPos, max_offset);
-    if(open2 == 1) {
+    if(open2 == 1)
+    {
         std::size_t rekursiv = match_Rekursiv(src, currentPos, max_offset);
         if(rekursiv == 0) return 0;
         else currentPos += rekursiv;
