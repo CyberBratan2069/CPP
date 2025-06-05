@@ -1,8 +1,8 @@
 //
 // Created by Christian Reiswich on 3/15/25.
 //
-#include "../../90_aux_src/helpers/AnsiConsole.hpp"
-#include "../../90_aux_src/helpers/printSteps.hpp"
+#include "../90_aux_src/helpers/AnsiConsole.hpp"
+#include "../90_aux_src/helpers/printSteps.hpp"
 #include <thread>
 #include <chrono>
 #include <future>

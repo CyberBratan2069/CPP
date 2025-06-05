@@ -9,10 +9,10 @@ add_executable(Cpp main.cpp
         deliverables-student/src-cpp-student/03_DATA_a/mods/z_limits_dataVars.cpp
         deliverables-student/src-cpp-student/03_DATA_a/z_printlnDemo.cpp
         deliverables-student/src-cpp-student/03_DATA_b/main_03_DATA.cpp
-        deliverables-student/src-cpp-certificateOfCompletion/03_DATA_a/DataVars.cpp
-        deliverables-student/src-cpp-certificateOfCompletion/04a_UDEF/Vektor2D/Vektor2D.h
-        deliverables-student/src-cpp-certificateOfCompletion/04a_UDEF/RgbColor/RgbColor.cpp
-        deliverables-student/src-cpp-certificateOfCompletion/04a_UDEF/RgbColor/main_rgbColor.cpp
+        deliverables-student/src-cpp/03_DATA_a/DataVars.cpp
+        deliverables-student/src-cpp/04a_UDEF/Vektor2D/Vektor2D.h
+        deliverables-student/src-cpp/04a_UDEF/RgbColor/RgbColor.cpp
+        deliverables-student/src-cpp/04a_UDEF/RgbColor/main_rgbColor.cpp
         deliverables-student/src-cpp-student/01_TOOL/z_implDecl/main.c
-        deliverables-student/src-cpp-certificateOfCompletion/07_IO-old/z_match_main.cpp
+        deliverables-student/src-cpp/07_IO-old/z_match_main.cpp
 )

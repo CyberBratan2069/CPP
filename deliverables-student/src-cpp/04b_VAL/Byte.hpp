@@ -23,6 +23,9 @@ struct Byte {
     Byte& shl(int steps);
     Byte& shr(int steps);
     Byte& getBit(int pos);
+    Byte& setBit(int pos, bool value);
+    Byte& flipBit(int pos);
+
 
 
 #ifdef TRACE

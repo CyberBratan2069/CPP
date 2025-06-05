@@ -1,4 +1,4 @@
-// this is "src-cpp-student/01_SMPL/main.cpp"
+// this is "src-cpp-student/01a_SMPL/main.cpp"
 
 //#include "/println.hpp" // declaration/definition of println()
 #include "../90_aux_src/helpers/println.hpp"
