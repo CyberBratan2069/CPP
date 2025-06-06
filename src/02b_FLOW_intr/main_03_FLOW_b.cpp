@@ -31,7 +31,7 @@ void install_ISR(void){
 
 
 //extern "C" {
-void ISR(int iarg){
+void ISR(int iarg) {
   //if (doPrintDebug) println("ISR j=",j, "iarg=", iarg);nop;
     if(timeStamps.slotsUsed<maxSignals){nop;
         time((time_t*)&timeStamps.slots[timeStamps.slotsUsed++]);nop;
@@ -39,8 +39,8 @@ void ISR(int iarg){
         nop;}
 //}
 
-void mainloop(){
-    for(int i=0; i<20; i++){
+void mainloop() {
+    for(int i=0; i<20; i++) {
         sigprocmask(SIG_BLOCK, (sigset_t *)&blockedSignals, NULL);
         int slotsUsed = timeStamps.slotsUsed;nop;
         sigprocmask(SIG_UNBLOCK, (sigset_t *)&blockedSignals, NULL);
@@ -54,7 +54,7 @@ void mainloop(){
     }
 }
 
-void start_ISR(){
+void start_ISR() {
     //if (doPrintDebug) println("process ID = ", getpid());
     timeStamps.slotsUsed = 0;
     sigemptyset ((sigset_t *)&blockedSignals);
@@ -66,7 +66,7 @@ void start_ISR(){
 
 typedef void (*voidFunc)();
 
-void performPattern(voidFunc func, std::string title){
+void performPattern(voidFunc func, std::string title) {
     TITLE(title);
     func();
     printCommands(__FILE__);
