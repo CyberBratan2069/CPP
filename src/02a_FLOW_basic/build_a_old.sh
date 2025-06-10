@@ -1,5 +1,3 @@
-#This is the old shell program
-
 #!/usr/bin/env bash
 ############################################
 ##          E N V I R O N M E N T         ##
