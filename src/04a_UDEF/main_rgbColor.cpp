@@ -1,12 +1,15 @@
-#include "../../90_aux_src/helpers/println.hpp"
+#include "../90_aux_src/helpers/println.hpp"
 #include "RgbColor.hpp"
 
 
-void foobar(double d){
+void foobar(double d)
+{
   println("foobar(double d), d = ", d);
 }
 
-int main(){
+
+int main()
+{
     RgbColor pureBlue(0xff);
     println("pureBlue = ", pureBlue);
     println("pureBlue Negated = ",pureBlue.negated());
@@ -28,16 +31,20 @@ int main(){
     println("mix1 = ", mix1);
 
     RgbColor black(0);
-    if(!black){
+    if(!black)
+    {
         println("fine, black = ", black, " is " , static_cast<bool>(black));
     }
 
     RgbColor otw(0x0123456);
     foobar(static_cast<double>(otw));
 
-    if(mix1 > pureRed){
+    if(mix1 > pureRed)
+    {
         println("mix1 is greater than ", pureRed);
-    } else {
+    }
+    else
+    {
         println("mix1 is less/equal than ", pureRed);
     }
 

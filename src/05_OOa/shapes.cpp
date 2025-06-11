@@ -29,7 +29,7 @@ void Scene::drawAll() {
 Point::Point(int x, int y, Colors colors)
     : Shape(colors), _x(x), _y(y) {}
 
-void Point::draw(){
+void Point::draw() {
   ansiConsole.printText(_x, _y,"*", _colors);
 }
 

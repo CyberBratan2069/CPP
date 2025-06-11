@@ -33,10 +33,8 @@ std::string readFile(std::string inputFile)
 
 std::string preprocess(std::string input)
 {
-    for(std::string::iterator it = input.begin(); it< input.end(); it++)
-    {
-        if(std::isspace(static_cast<unsigned char>(*it)))
-        {
+    for(std::string::iterator it = input.begin(); it< input.end(); it++) {
+        if(std::isspace(static_cast<unsigned char>(*it))) {
             input.erase(it); // löschen an der pos:
         }
     }
