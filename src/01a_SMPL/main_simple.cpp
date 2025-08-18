@@ -1,11 +1,11 @@
-//
-// Created by Christian Reiswich on 3/8/25.
-//
+/***********************************************************************************************************************
+ * @author Christian Reiswich
+ * @created 3/8/25
+ **********************************************************************************************************************/
 
 #include "../90_aux_src/helpers/println.hpp"
 
-//Compiling with => g++ -std=c++11 myfile.cpp -o myprogram
-//Compiling with => clang++ -std=c++11 main.cpp example.cpp -o example
+//Compiling with => g++ -std=c++11 main_simple.cpp -o main_smpl
 
 
 int polynom1(int x) {
@@ -22,17 +22,19 @@ int polynomAll(int x) {
 
 int main() { // program entry point
 
-    println("Polynom1: ");
+    println("01a_SMPL: ");
+
+    println("\nPolynom1: ");
     for(int i=0; i<=10; i++) {
         println(i, ": ", polynom1(i));
     }
 
-    println("Polynom2: ");
+    println("\nPolynom2: ");
     for(int i=0; i<=10; i++) {
         println(i, ": ", polynom2(i));
     }
 
-    println("PolynomAll: ");
+    println("\nPolynomAll: ");
     int i=0;
     while (i<=10) {
         println(i, ": ", polynomAll(i));

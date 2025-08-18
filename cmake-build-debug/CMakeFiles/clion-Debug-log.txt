@@ -1,9 +1,9 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S /Users/khristianreizvikh/CLionProject/Cpp -B /Users/khristianreizvikh/CLionProject/Cpp/cmake-build-debug
+/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /Users/khristianreizvikh/CLionProjects/CPP -B /Users/khristianreizvikh/CLionProjects/CPP/cmake-build-debug
 -- Configuring done (0.1s)
 CMake Error at CMakeLists.txt:6 (add_executable):
   Cannot find source file:
 
-    deliverables-student/src-cpp-student/04a_UDEF/mods/main_rgbColor.cpp
+    main.cpp
 
 
 CMake Error at CMakeLists.txt:6 (add_executable):
