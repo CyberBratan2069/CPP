@@ -1,14 +1,17 @@
+/***********************************************************************************************************************
+ * @author Christian Reiswich
+ * @created 10 Mar. 2025
+ **********************************************************************************************************************/
+
+
 // Multipli Definition => Mehrfach definierte Variablen
 // Undefined Indentifier => Main ruft eine Funktion auf die garnicht existiert
 // Undefined Reference => Main ruft eine Funtkion auf die keine Werte hat
-
-//Compiling with => clang++ -std=c++11 main.cpp example.cpp -o example
 
 
 #include "polynom1.h"
 #include "polynom2.h"
 #include "../90_aux_src/helpers/println.hpp"
-
 
 
 int main() {
