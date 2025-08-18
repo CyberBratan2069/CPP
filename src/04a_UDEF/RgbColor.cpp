@@ -1,13 +1,25 @@
+/***********************************************************************************************************************
+ * @author Christian Reiswich
+ * @created 01 Mai. 2025
+ * @last modified 06 Mai. 2025
+ * @version 1.0
+ * @brief
+ **********************************************************************************************************************/
+
+
 #include "RgbColor.hpp"
 #include <algorithm>
+
 
 /** Default-Constructor */
 RgbColor::RgbColor()
     : m_red(0), m_green(0), m_blue(0) {}
 
+
 /** Color-Constructor */
 RgbColor::RgbColor(unsigned int m_red, unsigned int m_green, unsigned int m_blue)
     : m_red(m_red), m_green(m_green), m_blue(m_blue) {}
+
 
 //
 RgbColor::RgbColor(uint32_t rgbVal)
@@ -16,6 +28,7 @@ RgbColor::RgbColor(uint32_t rgbVal)
     m_green = (rgbVal & 0xff00  ) >> 8;
     m_blue  = (rgbVal & 0xff    );
 }
+
 
 /** Operators */
 RgbColor RgbColor::operator+(const RgbColor& color) const

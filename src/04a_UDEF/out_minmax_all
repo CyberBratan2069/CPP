@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Farben
+blue='\033[01;34m'
+green='\033[01;32m'
+red='\033[01;31m'
+nc='\033[0m'
+
+run_bin() {
+  local title="$1" bin="$2"
+  if [[ ! -x "$bin" ]]; then
+    printf "${red}Fehler:${nc} %s nicht gefunden oder nicht ausführbar.\n" "$bin" >&2
+    exit 1
+  fi
+  printf "${blue}%s${nc}\n" "$title"
+  "./$bin"
+}
+
+run_bin "I N T E G E R"   "out_minmax_int"
+run_bin "D O U B L E"     "out_minmax_double"
+run_bin "R A T I O N A L" "out_minmax_rational"
+run_bin "R G B"           "out_minmax_rgb"
