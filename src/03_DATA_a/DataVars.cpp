@@ -1,6 +1,11 @@
-//
-// Created by Christian Reiswich on 3/31/25.
-//
+/***********************************************************************************************************************
+ * @author Christian Reiswich
+ * @created on 31 Mar. 2025
+ * @last modified 10 Apr. 2025
+ * @version 1.0
+ * @brief
+ **********************************************************************************************************************/
+
 
 #include "../90_aux_src/helpers/println.hpp"
 #include "DataVars.h"
@@ -21,27 +26,21 @@ bool A6::isOfCharacterKind(char c, bool isAlphabetic, bool isNumeric, bool isUpp
 }
 
 std::string A7::characterSequence(bool alphaLowerCase, bool alphaUpperCase, bool numeric) {
-    std::string charSnake;
-    std::string lowe;
-    std::string up;
-    std::string num;
+    std::string result;
 
     for(char c=32; c<127; c++) {
-        lowe = islower(c) == alphaLowerCase ? charSnake += c : "";
-        up = isupper(c) == alphaUpperCase ? charSnake += c : "";
-        num = isdigit(c) == numeric ? charSnake += c : "";
+        if(alphaLowerCase && std::islower(c)) result += c;
+        if(alphaUpperCase && std::isupper(c)) result += c;
+        if(numeric        && std::isdigit(c)) result += c;
     }
-    println(charSnake);
+
+    return result;
 }
 
 int main() {
 
     A1::printInfoFor("Emden", 70000, true);
-    A6::isOfCharacterKind('X', true, false, true);
+    println(A6::isOfCharacterKind('X', true, false, true));
+    println(A7::characterSequence(true, false, true));
 
-    for(char c=32; c<127; c++) {
-
-    }
-
-    A7::characterSequence(true, false, true);
 }
