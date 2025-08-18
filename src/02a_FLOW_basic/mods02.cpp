@@ -1,6 +1,8 @@
-//
-// Created by Christian Reiswich on 3/15/25.
-//
+/***********************************************************************************************************************
+ * @author Christian Reiswich
+ * @created 15 Mar. 2025
+ **********************************************************************************************************************/
+
 #include "../90_aux_src/helpers/AnsiConsole.hpp"
 #include "../90_aux_src/helpers/printSteps.hpp"
 #include <thread>
