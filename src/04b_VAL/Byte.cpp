@@ -40,7 +40,7 @@ Byte& Byte::operator=(const Byte& src) // assignment; overwrites old value
   return *this;
 }
 #endif
-  
+
 Byte& Byte::operator<<(int shifts) {
     bits <<= shifts;
     return *this;
@@ -59,9 +59,31 @@ Byte& Byte::shr(int steps) {
     return Byte::operator>>(steps);
 }
 
-Byte& Byte::getBit(int pos) {
-    return ;
+Byte& Byte::setBit(int pos) {
+    bits |= (1u << pos);
+    return *this;
 }
+
+Byte& Byte::getBit(int pos) {
+    bits = (bits >> pos) & 1u;
+    return *this;
+}
+
+Byte& Byte::clearBit(int pos) {
+    bits &= ~(1u << pos);
+    return *this;
+}
+
+Byte& Byte::toggleBit(int pos) {
+    bits ^= (1u << pos);
+    return *this;
+}
+
+Byte& Byte::invertBit() {
+    bits = ~bits;
+    return *this;
+}
+
 
 /**
   Byte& shl(int steps);

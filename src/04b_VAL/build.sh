@@ -1,16 +1,20 @@
 #!/usr/bin/env bash
+########################################################################################################################
+##                                                E N V I R O N M E N T                                               ##
+########################################################################################################################
 set -e
+HEADER_PATH=${CPP_SRC_UTIL_PATH:-../90_aux_src}
 set -x
 
 
-HEADER_PATH=${CPP_SRC_UTIL_PATH:-../90_aux_src}
-
+########################################################################################################################
+##                                         C O M P I L E R  A N D  L I N K E R                                        ##
+########################################################################################################################
 CPP_FLAGS="-std=c++14 -fno-elide-constructors -DTRACE"
 
-
-clang++ -I${HEADER_PATH}/helpers ${CPP_FLAGS} -c main_byte.cpp
-clang++ -I${HEADER_PATH}/helpers ${CPP_FLAGS} -c Byte.cpp
-
-clang++ -o a.out_Byte  main_byte.o Byte.o
+clang++ ${CPPFLAGS} \
+  main_byte.cpp \
+  Byte.cpp \
+  -o Byte
 
 
