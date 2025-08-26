@@ -129,77 +129,53 @@ Cpp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cpp.dir/build.make CMakeFiles/Cpp.dir/build
 .PHONY : Cpp/fast
 
-src/01a_SMPL/main_simple.o: src/01a_SMPL/main_simple.cpp.o
-.PHONY : src/01a_SMPL/main_simple.o
+src/05_OOa/shapes.o: src/05_OOa/shapes.cpp.o
+.PHONY : src/05_OOa/shapes.o
 
 # target to build an object file
-src/01a_SMPL/main_simple.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cpp.dir/build.make CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.o
-.PHONY : src/01a_SMPL/main_simple.cpp.o
+src/05_OOa/shapes.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cpp.dir/build.make CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.o
+.PHONY : src/05_OOa/shapes.cpp.o
 
-src/01a_SMPL/main_simple.i: src/01a_SMPL/main_simple.cpp.i
-.PHONY : src/01a_SMPL/main_simple.i
+src/05_OOa/shapes.i: src/05_OOa/shapes.cpp.i
+.PHONY : src/05_OOa/shapes.i
 
 # target to preprocess a source file
-src/01a_SMPL/main_simple.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cpp.dir/build.make CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.i
-.PHONY : src/01a_SMPL/main_simple.cpp.i
+src/05_OOa/shapes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cpp.dir/build.make CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.i
+.PHONY : src/05_OOa/shapes.cpp.i
 
-src/01a_SMPL/main_simple.s: src/01a_SMPL/main_simple.cpp.s
-.PHONY : src/01a_SMPL/main_simple.s
+src/05_OOa/shapes.s: src/05_OOa/shapes.cpp.s
+.PHONY : src/05_OOa/shapes.s
 
 # target to generate assembly for a file
-src/01a_SMPL/main_simple.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cpp.dir/build.make CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.s
-.PHONY : src/01a_SMPL/main_simple.cpp.s
+src/05_OOa/shapes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cpp.dir/build.make CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.s
+.PHONY : src/05_OOa/shapes.cpp.s
 
-src/04b_VAL/Byte.o: src/04b_VAL/Byte.cpp.o
-.PHONY : src/04b_VAL/Byte.o
+src/05_OOa/shapes_main.o: src/05_OOa/shapes_main.cpp.o
+.PHONY : src/05_OOa/shapes_main.o
 
 # target to build an object file
-src/04b_VAL/Byte.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cpp.dir/build.make CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.o
-.PHONY : src/04b_VAL/Byte.cpp.o
+src/05_OOa/shapes_main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cpp.dir/build.make CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.o
+.PHONY : src/05_OOa/shapes_main.cpp.o
 
-src/04b_VAL/Byte.i: src/04b_VAL/Byte.cpp.i
-.PHONY : src/04b_VAL/Byte.i
-
-# target to preprocess a source file
-src/04b_VAL/Byte.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cpp.dir/build.make CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.i
-.PHONY : src/04b_VAL/Byte.cpp.i
-
-src/04b_VAL/Byte.s: src/04b_VAL/Byte.cpp.s
-.PHONY : src/04b_VAL/Byte.s
-
-# target to generate assembly for a file
-src/04b_VAL/Byte.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cpp.dir/build.make CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.s
-.PHONY : src/04b_VAL/Byte.cpp.s
-
-src/04b_VAL/main_byte.o: src/04b_VAL/main_byte.cpp.o
-.PHONY : src/04b_VAL/main_byte.o
-
-# target to build an object file
-src/04b_VAL/main_byte.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cpp.dir/build.make CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.o
-.PHONY : src/04b_VAL/main_byte.cpp.o
-
-src/04b_VAL/main_byte.i: src/04b_VAL/main_byte.cpp.i
-.PHONY : src/04b_VAL/main_byte.i
+src/05_OOa/shapes_main.i: src/05_OOa/shapes_main.cpp.i
+.PHONY : src/05_OOa/shapes_main.i
 
 # target to preprocess a source file
-src/04b_VAL/main_byte.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cpp.dir/build.make CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.i
-.PHONY : src/04b_VAL/main_byte.cpp.i
+src/05_OOa/shapes_main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cpp.dir/build.make CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.i
+.PHONY : src/05_OOa/shapes_main.cpp.i
 
-src/04b_VAL/main_byte.s: src/04b_VAL/main_byte.cpp.s
-.PHONY : src/04b_VAL/main_byte.s
+src/05_OOa/shapes_main.s: src/05_OOa/shapes_main.cpp.s
+.PHONY : src/05_OOa/shapes_main.s
 
 # target to generate assembly for a file
-src/04b_VAL/main_byte.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cpp.dir/build.make CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.s
-.PHONY : src/04b_VAL/main_byte.cpp.s
+src/05_OOa/shapes_main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cpp.dir/build.make CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.s
+.PHONY : src/05_OOa/shapes_main.cpp.s
 
 # Help Target
 help:
@@ -210,15 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Cpp"
-	@echo "... src/01a_SMPL/main_simple.o"
-	@echo "... src/01a_SMPL/main_simple.i"
-	@echo "... src/01a_SMPL/main_simple.s"
-	@echo "... src/04b_VAL/Byte.o"
-	@echo "... src/04b_VAL/Byte.i"
-	@echo "... src/04b_VAL/Byte.s"
-	@echo "... src/04b_VAL/main_byte.o"
-	@echo "... src/04b_VAL/main_byte.i"
-	@echo "... src/04b_VAL/main_byte.s"
+	@echo "... src/05_OOa/shapes.o"
+	@echo "... src/05_OOa/shapes.i"
+	@echo "... src/05_OOa/shapes.s"
+	@echo "... src/05_OOa/shapes_main.o"
+	@echo "... src/05_OOa/shapes_main.i"
+	@echo "... src/05_OOa/shapes_main.s"
 .PHONY : help
 
 

@@ -72,63 +72,47 @@ include CMakeFiles/Cpp.dir/flags.make
 CMakeFiles/Cpp.dir/codegen:
 .PHONY : CMakeFiles/Cpp.dir/codegen
 
-CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.o: CMakeFiles/Cpp.dir/flags.make
-CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.o: /Users/christianreiswich/CLionProjects/CPP/src/04b_VAL/Byte.cpp
-CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.o: CMakeFiles/Cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christianreiswich/CLionProjects/CPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.o -MF CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.o.d -o CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.o -c /Users/christianreiswich/CLionProjects/CPP/src/04b_VAL/Byte.cpp
+CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.o: CMakeFiles/Cpp.dir/flags.make
+CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.o: /Users/christianreiswich/CLionProjects/CPP/src/05_OOa/shapes.cpp
+CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.o: CMakeFiles/Cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christianreiswich/CLionProjects/CPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.o -MF CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.o.d -o CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.o -c /Users/christianreiswich/CLionProjects/CPP/src/05_OOa/shapes.cpp
 
-CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/christianreiswich/CLionProjects/CPP/src/04b_VAL/Byte.cpp > CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.i
+CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/christianreiswich/CLionProjects/CPP/src/05_OOa/shapes.cpp > CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.i
 
-CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/christianreiswich/CLionProjects/CPP/src/04b_VAL/Byte.cpp -o CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.s
+CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/christianreiswich/CLionProjects/CPP/src/05_OOa/shapes.cpp -o CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.s
 
-CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.o: CMakeFiles/Cpp.dir/flags.make
-CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.o: /Users/christianreiswich/CLionProjects/CPP/src/04b_VAL/main_byte.cpp
-CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.o: CMakeFiles/Cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christianreiswich/CLionProjects/CPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.o -MF CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.o.d -o CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.o -c /Users/christianreiswich/CLionProjects/CPP/src/04b_VAL/main_byte.cpp
+CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.o: CMakeFiles/Cpp.dir/flags.make
+CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.o: /Users/christianreiswich/CLionProjects/CPP/src/05_OOa/shapes_main.cpp
+CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.o: CMakeFiles/Cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christianreiswich/CLionProjects/CPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.o -MF CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.o.d -o CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.o -c /Users/christianreiswich/CLionProjects/CPP/src/05_OOa/shapes_main.cpp
 
-CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/christianreiswich/CLionProjects/CPP/src/04b_VAL/main_byte.cpp > CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.i
+CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/christianreiswich/CLionProjects/CPP/src/05_OOa/shapes_main.cpp > CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.i
 
-CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/christianreiswich/CLionProjects/CPP/src/04b_VAL/main_byte.cpp -o CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.s
-
-CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.o: CMakeFiles/Cpp.dir/flags.make
-CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.o: /Users/christianreiswich/CLionProjects/CPP/src/01a_SMPL/main_simple.cpp
-CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.o: CMakeFiles/Cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christianreiswich/CLionProjects/CPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.o -MF CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.o.d -o CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.o -c /Users/christianreiswich/CLionProjects/CPP/src/01a_SMPL/main_simple.cpp
-
-CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/christianreiswich/CLionProjects/CPP/src/01a_SMPL/main_simple.cpp > CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.i
-
-CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/christianreiswich/CLionProjects/CPP/src/01a_SMPL/main_simple.cpp -o CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.s
+CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/christianreiswich/CLionProjects/CPP/src/05_OOa/shapes_main.cpp -o CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.s
 
 # Object files for target Cpp
 Cpp_OBJECTS = \
-"CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.o" \
-"CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.o" \
-"CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.o"
+"CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.o" \
+"CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.o"
 
 # External object files for target Cpp
 Cpp_EXTERNAL_OBJECTS =
 
-Cpp: CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.o
-Cpp: CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.o
-Cpp: CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.o
+Cpp: CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.o
+Cpp: CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.o
 Cpp: CMakeFiles/Cpp.dir/build.make
 Cpp: CMakeFiles/Cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/christianreiswich/CLionProjects/CPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/christianreiswich/CLionProjects/CPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Cpp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

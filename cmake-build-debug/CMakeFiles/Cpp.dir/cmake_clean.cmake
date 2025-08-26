@@ -1,10 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.o"
-  "CMakeFiles/Cpp.dir/src/01a_SMPL/main_simple.cpp.o.d"
-  "CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.o"
-  "CMakeFiles/Cpp.dir/src/04b_VAL/Byte.cpp.o.d"
-  "CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.o"
-  "CMakeFiles/Cpp.dir/src/04b_VAL/main_byte.cpp.o.d"
+  "CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.o"
+  "CMakeFiles/Cpp.dir/src/05_OOa/shapes.cpp.o.d"
+  "CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.o"
+  "CMakeFiles/Cpp.dir/src/05_OOa/shapes_main.cpp.o.d"
   "Cpp"
   "Cpp.pdb"
 )

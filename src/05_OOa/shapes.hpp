@@ -1,3 +1,9 @@
+/***********************************************************************************************************************
+ * @author Christian Reiswich
+ * @created 13 Mai 2025
+ **********************************************************************************************************************/
+
+
 #include <iostream>
 #include <cmath>
 #include <vector>
@@ -13,6 +19,7 @@ public:
     virtual void draw() = 0;
 };
 
+
 class Scene {
 private:
     std::vector<Shape*> _shapes;
@@ -23,6 +30,7 @@ public:
     void drawAll();
 };
 
+
 class Point : public Shape {
 private:
     int _x;
@@ -31,6 +39,7 @@ public:
     Point(int x, int y, Colors colors);
     void draw() override;
 };
+
 
 class Circle : public Shape {
 private:
@@ -41,6 +50,7 @@ public:
     Circle(int x, int y, int radius, Colors colors);
     void draw() override;
 };
+
 
 class Rectangle : public Shape {
 protected:
@@ -53,12 +63,14 @@ public:
     void draw() override;
 };
 
+
 class PrintText : public Rectangle {
     std::string _text;
 public:
     PrintText(int x, int y, int width, int height, std::string text, Colors colors);
     void draw() override;
 };
+
 
 class Triangle : public Shape {
 private:
