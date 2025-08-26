@@ -41,6 +41,16 @@ int main(){
         println("b2 invert bit(2) = ", b2.invertBit());
 
 
+        /// Dynamic Byte object example
+        Byte* byte = new Byte(0xfe);
+        println("\nNew Byte -> ", byte->bits);
+        printByte(byte->bits);
+        printByte(byte->shr(2));
+        printByte(byte->clearBit(2));
+        printByte(byte->toggleBit(2));
+        delete byte;
+
+
     println("\n3333333333333333333333333");
     Byte b3=b2;         // copy ctor
     printByte(b3);
